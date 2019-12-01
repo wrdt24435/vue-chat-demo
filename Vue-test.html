@@ -15,7 +15,9 @@
                 穿过云,穿过雾
             </div>
             <div class="fr">
-                三个点
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
         </div>
         <div class="chat">
@@ -30,28 +32,15 @@
             <div class="pic">
                 <img src="images/k.png" alt="">
             </div>
-            <input type="text" id="ci" @keyup.enter="sendc" v-model="inputvalue" placeholder="说点什么吧...">
-            <span id="send">
+            <input type="text" id="ci" @keyup.enter="sendchat" v-model="inputvalue" placeholder="说点什么吧...">
+            <span id="send" @click="sendchat">
                 发送
             </span>
         </div>
     </div>
     <script src="js/vue.js"></script>
-    <script>
-    var app = new Vue({
-        el: '#container',
-        data: {
-            inputvalue: "",
-            chatlist:[ ]
-        },
-        methods: {
-            sendc() {   
-                this.chatlist.push(
-                {message : this.inputvalue}
-                )
-            }
-        },
-    })
-    </script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
+    <script src="js/777.js"></script>
 </body>
 </html>
